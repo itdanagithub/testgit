@@ -1,0 +1,22 @@
+find -name m_live.php
+
+查看系统访问日志：
+/var/log
+tail -f messages
+
+iptable位置
+etc/sysconfig/iptables
+
+
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [8:576]
+-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 34580 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --sport 22 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --sport 34580 -j ACCEPT
+-A INPUT -s hcyshsk.oicp.net -j ACCEPT
+COMMIT
+# Completed on Tue May  5 18:14:21 2015
+
+grep -o 'DestMobile' receive_http_mt.log|wc -l 统计文件中某个字符串的数量
