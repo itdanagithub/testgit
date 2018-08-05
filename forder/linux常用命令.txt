@@ -20,3 +20,4 @@ COMMIT
 # Completed on Tue May  5 18:14:21 2015
 
 grep -o 'DestMobile' receive_http_mt.log|wc -l 统计文件中某个字符串的数量
+tttttttttt
